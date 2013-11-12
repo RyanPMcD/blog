@@ -6,6 +6,23 @@ source 'https://rubygems.org'
 # Use sqlite3 as the database for Active Record
 # gem 'sqlite3'
 
+# Set the version of Ruby
+ruby '2.0.0'
+
+group :development, :test do
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'factory_girl_rails'
+  gem 'capybara'
+# might want to include selinium-browser
+end
+
+group :production do
+ gem  'rails_12factor'
+end
+
 # Use postgres instead of sglite3
 gem 'pg'
 
